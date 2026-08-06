@@ -43,7 +43,7 @@ function calcular() {
    ============================ */
 function fnSuma(n1, n2) {
     var resultado = n1 + n2;
-    document.getElementById('divSalidaSuma').innerHTML = 'Resultado de las suma es: ' + resultado;
+    document.getElementById('divSalidaSuma').innerHTML = 'Resultado de la suma es: ' + resultado;
 }
 
 function fnResta(n1, n2) {
