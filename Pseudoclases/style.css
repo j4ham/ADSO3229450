@@ -1,0 +1,835 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: #dceeff;
+
+    transition: 0.4s;
+}
+
+
+/* =========================================
+   FORMULARIO
+   ========================================= */
+
+.formulario {
+
+    width: 540px;
+
+    padding: 30px 40px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    /* Borde normal */
+
+    border: 3px solid transparent;
+
+    box-shadow:
+
+        10px 10px 20px
+        rgba(0, 80, 150, 0.20),
+
+        -10px -10px 20px
+        rgba(255, 255, 255, 0.9);
+
+    transition:
+
+        border-color 0.4s,
+
+        box-shadow 0.4s,
+
+        transform 0.4s;
+}
+
+
+/* =========================================
+   FORMULARIO DESPUÉS DE ENVIAR
+   ========================================= */
+
+.formulario-enviado {
+
+    border-color: #00bcd4;
+
+    box-shadow:
+
+        0 0 10px
+        rgba(0, 188, 212, 0.5),
+
+        0 0 25px
+        rgba(0, 188, 212, 0.25),
+
+        10px 10px 20px
+        rgba(0, 80, 150, 0.20),
+
+        -10px -10px 20px
+        rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================
+   :LANG()
+   ========================================= */
+
+.formulario:lang(es) {
+
+    font-family: Arial, sans-serif;
+}
+
+
+.formulario:lang(en) {
+
+    font-family: Arial, sans-serif;
+}
+
+
+.formulario:lang(ja) {
+
+    font-family:
+        "Yu Gothic",
+        "Meiryo",
+        sans-serif;
+}
+
+
+.formulario:lang(ru) {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+}
+
+
+.formulario:lang(ar) {
+
+    font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
+}
+
+
+/* =========================================
+   :DIR(LTR)
+   ========================================= */
+
+.formulario:dir(ltr) {
+
+    text-align: left;
+}
+
+
+/* =========================================
+   :DIR(RTL)
+   ========================================= */
+
+.formulario:dir(rtl) {
+
+    text-align: right;
+}
+
+
+/* =========================================
+   TÍTULO
+   ========================================= */
+
+.formulario h2 {
+
+    text-align: center;
+
+    margin-top: -5px;
+
+    margin-bottom: 35px;
+
+    color: #1769aa;
+
+    font-size: 30px;
+}
+
+
+/* =========================================
+   COLORES DEL TÍTULO
+   ========================================= */
+
+.formulario:lang(es) h2 {
+
+    color: #1769aa;
+}
+
+
+.formulario:lang(en) h2 {
+
+    color: #1565c0;
+}
+
+
+.formulario:lang(ja) h2 {
+
+    color: #d32f2f;
+}
+
+
+.formulario:lang(ru) h2 {
+
+    color: #3949ab;
+}
+
+
+.formulario:lang(ar) h2 {
+
+    color: #00897b;
+}
+
+
+/* =========================================
+   CAMPOS
+   ========================================= */
+
+.campo {
+
+    margin-bottom: 20px;
+
+    padding: 10px;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+
+/* =========================================
+   LABEL
+   ========================================= */
+
+.campo label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 18px;
+
+    color: #222;
+}
+
+
+/* =========================================
+   SELECTOR DE IDIOMA
+   ========================================= */
+
+.campo select {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid #cfd8dc;
+
+    border-radius: 12px;
+
+    background: #f8fbff;
+
+    color: #222;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    outline: none;
+
+    direction: ltr;
+
+    text-align: left;
+
+    transition:
+
+        background-color 0.4s,
+
+        border-color 0.4s,
+
+        box-shadow 0.4s,
+
+        color 0.4s;
+}
+
+
+/* =========================================
+   SELECT :HOVER
+   ========================================= */
+
+.campo select:hover {
+
+    border-color: #42a5f5;
+
+    background: #eef7ff;
+}
+
+
+/* =========================================
+   SELECT :FOCUS
+   ========================================= */
+
+.campo select:focus {
+
+    direction: rtl;
+
+    text-align: right;
+
+    background: #d9efff;
+
+    border-color: #1976d2;
+
+    color: #0d47a1;
+
+    box-shadow:
+
+        0 0 15px
+        rgba(25, 118, 210, 0.45);
+}
+
+
+/* =========================================
+   SELECT :DIR(LTR)
+   ========================================= */
+
+.campo select:dir(ltr) {
+
+    direction: ltr;
+
+    text-align: left;
+
+    background: #f8fbff;
+
+    border-color: #cfd8dc;
+}
+
+
+/* =========================================
+   SELECT :DIR(RTL)
+   ========================================= */
+
+.campo select:dir(rtl) {
+
+    direction: rtl;
+
+    text-align: right;
+
+    background: #d9efff;
+
+    border-color: #1976d2;
+
+    color: #0d47a1;
+
+    box-shadow:
+
+        0 0 15px
+        rgba(25, 118, 210, 0.45);
+}
+
+
+/* =========================================
+   GRUPOS
+   ========================================= */
+
+.grupo {
+
+    margin-top: 20px;
+
+    padding: 18px;
+
+    border-radius: 16px;
+
+    background: #f5faff;
+
+    transition: 0.3s;
+}
+
+
+.grupo h3 {
+
+    margin-top: 0;
+
+    color: #1769aa;
+
+    font-size: 21px;
+}
+
+
+/* =========================================
+   :FOCUS-WITHIN
+   ========================================= */
+
+.grupo:focus-within {
+
+    background: #e8f4ff;
+
+    box-shadow:
+
+        0 0 12px
+        rgba(25, 118, 210, 0.18);
+}
+
+
+/* =========================================
+   OPCIONES
+   ========================================= */
+
+.opcion {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px;
+
+    margin: 5px 0;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* =========================================
+   :HOVER
+   ========================================= */
+
+.opcion:hover {
+
+    background: #e3f2fd;
+
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   :ACTIVE
+   ========================================= */
+
+.opcion:active {
+
+    transform: scale(0.95);
+}
+
+
+/* =========================================
+   :FOCUS-WITHIN
+   ========================================= */
+
+.opcion:focus-within {
+
+    background: #d9efff;
+
+    box-shadow:
+
+        0 0 10px
+        rgba(25, 118, 210, 0.25);
+}
+
+
+/* =========================================
+   CHECKBOX Y RADIO
+   ========================================= */
+
+.opcion input {
+
+    width: 20px;
+
+    height: 20px;
+
+    cursor: pointer;
+
+    accent-color: #1976d2;
+}
+
+
+/* =========================================
+   :FOCUS
+   ========================================= */
+
+.opcion input:focus {
+
+    outline:
+
+        3px solid
+        rgba(25, 118, 210, 0.25);
+}
+
+
+/* =========================================
+   :FOCUS-VISIBLE
+   ========================================= */
+
+.opcion input:focus-visible {
+
+    outline: 3px solid #1976d2;
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   :CHECKED
+   ========================================= */
+
+.opcion input:checked {
+
+    accent-color: #0d47a1;
+}
+
+
+/* =========================================
+   TEXTO CHECKED
+   ========================================= */
+
+.opcion input:checked + span {
+
+    color: #0d47a1;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   DIRECCIÓN OPCIONES
+   ========================================= */
+
+.formulario:dir(ltr) .opcion {
+
+    flex-direction: row;
+}
+
+
+.formulario:dir(rtl) .opcion {
+
+    flex-direction: row-reverse;
+}
+
+
+/* =========================================
+   CONTRASEÑA
+   ========================================= */
+
+.contraseña {
+
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   INPUT CONTRASEÑA
+   ========================================= */
+
+.contraseña input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid #cfd8dc;
+
+    border-radius: 12px;
+
+    background: #f8fbff;
+
+    color: #222;
+
+    font-size: 17px;
+
+    outline: none;
+
+    direction: ltr;
+
+    text-align: left;
+
+    transition:
+
+        background-color 0.4s,
+
+        border-color 0.4s,
+
+        box-shadow 0.4s,
+
+        color 0.4s;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+   ========================================= */
+
+.contraseña input::placeholder {
+
+    color: #78909c;
+
+    text-align: left;
+}
+
+
+/* =========================================
+   CONTRASEÑA :HOVER
+   ========================================= */
+
+.contraseña input:hover {
+
+    border-color: #42a5f5;
+
+    background: #eef7ff;
+}
+
+
+/* =========================================
+   CONTRASEÑA ACTIVA
+   ========================================= */
+
+.contraseña input.password-activa {
+
+    direction: rtl;
+
+    text-align: right;
+
+    background: #f3e5f5;
+
+    border-color: #8e24aa;
+
+    color: #6a1b9a;
+
+    box-shadow:
+
+        0 0 8px
+        rgba(142, 36, 170, 0.45),
+
+        0 0 20px
+        rgba(142, 36, 170, 0.30);
+}
+
+
+/* =========================================
+   PLACEHOLDER CONTRASEÑA ACTIVA
+   ========================================= */
+
+.contraseña input.password-activa::placeholder {
+
+    text-align: right;
+
+    color: #8e44ad;
+}
+
+
+/* =========================================
+   TÉRMINOS
+   ========================================= */
+
+.terminos {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* =========================================
+   :HOVER
+   ========================================= */
+
+.terminos:hover {
+
+    background: #eef7ff;
+}
+
+
+/* =========================================
+   :ACTIVE
+   ========================================= */
+
+.terminos:active {
+
+    transform: scale(0.97);
+}
+
+
+/* =========================================
+   :FOCUS-WITHIN
+   ========================================= */
+
+.terminos:focus-within {
+
+    background: #d9efff;
+
+    box-shadow:
+
+        0 0 10px
+        rgba(25, 118, 210, 0.2);
+}
+
+
+/* =========================================
+   :CHECKED
+   ========================================= */
+
+.terminos input:checked + span {
+
+    color: #1976d2;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   DIRECCIÓN TÉRMINOS
+   ========================================= */
+
+.formulario:dir(ltr) .terminos {
+
+    flex-direction: row;
+}
+
+
+.formulario:dir(rtl) .terminos {
+
+    flex-direction: row-reverse;
+}
+
+
+/* =========================================
+   BOTÓN
+   ========================================= */
+
+button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #1976d2;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* =========================================
+   BOTÓN :HOVER
+   ========================================= */
+
+button:hover {
+
+    background: #0d47a1;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+
+        0 6px 15px
+        rgba(25, 118, 210, 0.35);
+}
+
+
+/* =========================================
+   BOTÓN :ACTIVE
+   ========================================= */
+
+button:active {
+
+    transform: scale(0.94);
+    
+
+    box-shadow:
+
+        inset 4px 4px 8px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   BOTÓN :FOCUS
+   ========================================= */
+
+button:focus {
+
+    outline: none;
+}
+
+
+/* =========================================
+   BOTÓN :FOCUS-VISIBLE
+   ========================================= */
+
+button:focus-visible {
+
+    outline: 4px solid #64b5f6;
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .formulario {
+
+        width: 95%;
+
+        padding: 25px 20px;
+    }
+
+
+    .formulario h2 {
+
+        font-size: 25px;
+    }
+
+}

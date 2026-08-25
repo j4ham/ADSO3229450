@@ -1,0 +1,870 @@
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* =====================================
+   CUERPO
+===================================== */
+
+body {
+
+    min-height: 100vh;
+
+    background: #dceeff;
+
+    padding: 40px 20px;
+}
+
+
+/* =====================================
+   TÍTULO PRINCIPAL
+===================================== */
+
+.page-title {
+
+    text-align: center;
+
+    color: #416985;
+
+    margin-bottom: 50px;
+
+    font-size: 32px;
+
+
+    /* TEXT SHADOW */
+
+    text-shadow:
+
+        3px 3px 0px #78a9d0,
+
+        6px 6px 10px rgba(65, 105, 133, 0.4);
+}
+
+
+/* =====================================
+   GALERÍA
+===================================== */
+
+.gallery {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 40px;
+}
+
+
+/* =====================================
+   CONTENEDOR
+===================================== */
+
+.form-container {
+
+    padding: 40px 30px;
+
+    border-radius: 25px;
+
+    width: 100%;
+
+    max-width: 350px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+
+    transition:
+
+        transform 0.3s ease,
+
+        box-shadow 0.3s ease;
+}
+
+
+/* =====================================
+   HOVER DEL CONTENEDOR
+===================================== */
+
+.form-container:hover {
+
+    transform:
+
+        translateY(-8px)
+
+        scale(1.03);
+}
+
+
+/* =====================================
+   PRIMERA IMAGEN
+   DROP-SHADOW
+===================================== */
+
+.form-image {
+
+    width: 120px;
+
+    height: 120px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin: 0 auto 10px;
+
+    border-radius: 50%;
+
+
+    /* DROP SHADOW */
+
+    filter:
+
+        drop-shadow(
+            8px 8px 10px #a9c5dc
+        )
+
+        drop-shadow(
+            -5px -5px 10px #ffffff
+        );
+
+
+    transition:
+
+        transform 0.3s ease,
+
+        filter 0.3s ease;
+}
+
+
+/* =====================================
+   HOVER DE LA PRIMERA IMAGEN
+===================================== */
+
+.form-container:hover .form-image {
+
+    transform:
+
+        translateY(-5px)
+
+        scale(1.08);
+
+
+    filter:
+
+        drop-shadow(
+            10px 10px 15px #6b9bc1
+        )
+
+        drop-shadow(
+            -6px -6px 12px #ffffff
+        );
+}
+
+
+/* =====================================
+   NUEVA IMAGEN
+   CONTENEDOR BOX-SHADOW
+===================================== */
+
+.image-box {
+
+    width: 100px;
+
+    height: 100px;
+
+    margin: 10px auto 20px;
+
+    border-radius: 20px;
+
+    background: #dceeff;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+
+    /* BOX SHADOW EXTERIOR */
+
+    box-shadow:
+
+        8px 8px 16px #a9c5dc,
+
+        -8px -8px 16px #ffffff;
+
+
+    transition:
+
+        transform 0.3s ease,
+
+        box-shadow 0.3s ease;
+}
+
+
+/* =====================================
+   SEGUNDA IMAGEN
+===================================== */
+
+.form-image-2 {
+
+    width: 70px;
+
+    height: 70px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+
+    /*
+       INNER SHADOW
+    */
+
+    box-shadow:
+
+        inset 5px 5px 10px #a9c5dc,
+
+        inset -5px -5px 10px #ffffff;
+
+
+    transition:
+
+        transform 0.3s ease;
+}
+
+
+/* =====================================
+   HOVER DE LA NUEVA IMAGEN
+===================================== */
+
+.image-box:hover {
+
+    transform:
+
+        translateY(-5px)
+
+        scale(1.08);
+
+
+    /*
+       INSET + BOX SHADOW
+    */
+
+    box-shadow:
+
+        inset 5px 5px 10px #a9c5dc,
+
+        inset -5px -5px 10px #ffffff,
+
+        10px 10px 20px #a9c5dc,
+
+        -10px -10px 20px #ffffff;
+}
+
+
+/* =====================================
+   HOVER DE LA SEGUNDA IMAGEN
+===================================== */
+
+.image-box:hover .form-image-2 {
+
+    transform: scale(0.95);
+}
+
+
+/* =====================================
+   TÍTULOS
+===================================== */
+
+.form-container h2 {
+
+    text-align: center;
+
+    font-size: 22px;
+
+    margin-bottom: 5px;
+}
+
+
+/* =====================================
+   DESCRIPCIÓN
+===================================== */
+
+.form-container .desc {
+
+    text-align: center;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================
+   FORMULARIO
+===================================== */
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* =====================================
+   INPUTS
+===================================== */
+
+input {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+
+        box-shadow 0.3s ease,
+
+        transform 0.2s ease;
+}
+
+
+/* =====================================
+   INPUT HOVER
+===================================== */
+
+input:hover {
+
+    transform: scale(1.02);
+}
+
+
+/* =====================================
+   BOTONES
+===================================== */
+
+button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+
+    transition:
+
+        transform 0.2s ease,
+
+        box-shadow 0.2s ease;
+}
+
+
+/* =====================================
+   BOTÓN HOVER
+===================================== */
+
+button:hover {
+
+    transform: scale(1.03);
+}
+
+
+/* =====================================
+   BOTÓN ACTIVE
+===================================== */
+
+button:active {
+
+    transform:
+
+        translateY(2px)
+
+        scale(0.98);
+}
+
+
+/* =====================================================
+   EJEMPLO 1
+   CLÁSICO
+===================================================== */
+
+.classic-shadow {
+
+    background-color: #ffffff;
+
+
+    /* BOX SHADOW */
+
+    box-shadow:
+
+        0 15px 30px rgba(0, 0, 0, 0.15),
+
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =====================================
+   TEXT SHADOW ROJO
+===================================== */
+
+.classic-shadow h2 {
+
+    color: #333333;
+
+    text-shadow:
+
+        3px 3px 0px #ff6b6b,
+
+        6px 6px 10px rgba(255, 0, 0, 0.3);
+}
+
+
+.classic-shadow .desc {
+
+    color: #555555;
+
+    text-shadow:
+
+        2px 2px 0px #ffb3b3,
+
+        3px 3px 6px rgba(255, 0, 0, 0.25);
+}
+
+
+/* INPUT */
+
+.classic-shadow input {
+
+    background-color: #f5f7fa;
+
+
+    /* INNER SHADOW */
+
+    box-shadow:
+
+        inset 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+/* INPUT FOCUS */
+
+.classic-shadow input:focus {
+
+    box-shadow:
+
+        inset 0 3px 6px rgba(74, 144, 226, 0.2),
+
+        0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+
+/* BOTÓN */
+
+.classic-shadow button {
+
+    background-color: #4a90e2;
+
+    color: white;
+
+
+    /* OUTER SHADOW */
+
+    box-shadow:
+
+        0 5px 15px rgba(74, 144, 226, 0.4);
+
+
+    /* TEXT SHADOW */
+
+    text-shadow:
+
+        2px 2px 0px #24527a,
+
+        3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+/* BOTÓN HOVER */
+
+.classic-shadow button:hover {
+
+    box-shadow:
+
+        inset 0 3px 6px rgba(0, 0, 0, 0.2),
+
+        0 7px 18px rgba(74, 144, 226, 0.5);
+}
+
+
+/* HOVER DEL FORMULARIO */
+
+.classic-shadow:hover {
+
+    box-shadow:
+
+        inset 0 0 15px rgba(74, 144, 226, 0.12),
+
+        0 20px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =====================================================
+   EJEMPLO 2
+   NEOMORFISMO CLARO
+===================================================== */
+
+.neumorphism-light {
+
+    background-color: #dceeff;
+
+
+    /* BOX SHADOW */
+
+    box-shadow:
+
+        10px 10px 20px #a9c5dc,
+
+        -10px -10px 20px #ffffff;
+}
+
+
+/* =====================================
+   TEXT SHADOW MORADO
+===================================== */
+
+.neumorphism-light h2 {
+
+    color: #416985;
+
+    text-shadow:
+
+        3px 3px 0px #b18cff,
+
+        6px 6px 10px rgba(120, 50, 200, 0.3);
+}
+
+
+.neumorphism-light .desc {
+
+    color: #62839c;
+
+    text-shadow:
+
+        2px 2px 0px #d2bfff,
+
+        3px 3px 6px rgba(120, 50, 200, 0.25);
+}
+
+
+/* INPUT */
+
+.neumorphism-light input {
+
+    background-color: #dceeff;
+
+    color: #416985;
+
+
+    /* INNER SHADOW */
+
+    box-shadow:
+
+        inset 6px 6px 12px #a9c5dc,
+
+        inset -6px -6px 12px #ffffff;
+}
+
+
+/* INPUT HOVER */
+
+.neumorphism-light input:hover {
+
+    box-shadow:
+
+        inset 8px 8px 15px #a9c5dc,
+
+        inset -8px -8px 15px #ffffff;
+}
+
+
+/* INPUT FOCUS */
+
+.neumorphism-light input:focus {
+
+    transform: scale(1.02);
+
+    box-shadow:
+
+        inset 8px 8px 15px #9ebdd6,
+
+        inset -8px -8px 15px #ffffff;
+}
+
+
+/* BOTÓN */
+
+.neumorphism-light button {
+
+    background-color: #dceeff;
+
+    color: #416985;
+
+
+    /* OUTER SHADOW */
+
+    box-shadow:
+
+        7px 7px 15px #a9c5dc,
+
+        -7px -7px 15px #ffffff;
+
+
+    /* TEXT SHADOW */
+
+    text-shadow:
+
+        2px 2px 0px #9b6de3,
+
+        3px 3px 6px rgba(100, 50, 180, 0.3);
+}
+
+
+/* BOTÓN HOVER */
+
+.neumorphism-light button:hover {
+
+    box-shadow:
+
+        inset 5px 5px 10px #a9c5dc,
+
+        inset -5px -5px 10px #ffffff;
+}
+
+
+/* HOVER FORMULARIO */
+
+.neumorphism-light:hover {
+
+    box-shadow:
+
+        inset 5px 5px 12px #a9c5dc,
+
+        inset -5px -5px 12px #ffffff,
+
+        12px 12px 25px #a9c5dc,
+
+        -12px -12px 25px #ffffff;
+}
+
+
+/* =====================================================
+   EJEMPLO 3
+   NEOMORFISMO OSCURO
+===================================================== */
+
+.neumorphism-dark {
+
+    background-color: #292d32;
+
+
+    /* BOX SHADOW */
+
+    box-shadow:
+
+        7px 7px 15px rgba(22, 24, 26, 0.8),
+
+        -7px -7px 15px rgba(60, 66, 74, 0.8);
+}
+
+
+/* =====================================
+   TEXT SHADOW VERDE / CIAN
+===================================== */
+
+.neumorphism-dark h2 {
+
+    color: #d1d5db;
+
+    text-shadow:
+
+        3px 3px 0px #00bfa6,
+
+        6px 6px 12px rgba(0, 255, 200, 0.35);
+}
+
+
+.neumorphism-dark .desc {
+
+    color: #d1d5db;
+
+    text-shadow:
+
+        2px 2px 0px #008f7a,
+
+        4px 4px 8px rgba(0, 255, 200, 0.25);
+}
+
+
+/* INPUT */
+
+.neumorphism-dark input {
+
+    background-color: #292d32;
+
+    color: #d1d5db;
+
+
+    /* INNER SHADOW */
+
+    box-shadow:
+
+        inset 5px 5px 10px rgba(22, 24, 26, 0.8),
+
+        inset -5px -5px 10px rgba(60, 66, 74, 0.8);
+}
+
+
+/* INPUT HOVER */
+
+.neumorphism-dark input:hover {
+
+    box-shadow:
+
+        inset 7px 7px 12px rgba(22, 24, 26, 0.9),
+
+        inset -7px -7px 12px rgba(60, 66, 74, 0.8);
+}
+
+
+/* INPUT FOCUS */
+
+.neumorphism-dark input:focus {
+
+    transform: scale(1.02);
+
+    box-shadow:
+
+        inset 7px 7px 12px rgba(22, 24, 26, 0.9),
+
+        inset -7px -7px 12px rgba(60, 66, 74, 0.8);
+}
+
+
+/* PLACEHOLDER */
+
+.neumorphism-dark input::placeholder {
+
+    color: #7b828a;
+}
+
+
+/* BOTÓN */
+
+.neumorphism-dark button {
+
+    background-color: #292d32;
+
+    color: #d1d5db;
+
+
+    /* OUTER SHADOW */
+
+    box-shadow:
+
+        5px 5px 10px rgba(22, 24, 26, 0.8),
+
+        -5px -5px 10px rgba(60, 66, 74, 0.8);
+
+
+    /* TEXT SHADOW */
+
+    text-shadow:
+
+        2px 2px 0px #00bfa6,
+
+        4px 4px 8px rgba(0, 255, 200, 0.35);
+}
+
+
+/* BOTÓN HOVER */
+
+.neumorphism-dark button:hover {
+
+    box-shadow:
+
+        inset 5px 5px 10px rgba(22, 24, 26, 0.8),
+
+        inset -5px -5px 10px rgba(60, 66, 74, 0.8);
+}
+
+
+/* BOTÓN ACTIVE */
+
+.neumorphism-dark button:active {
+
+    box-shadow:
+
+        inset 5px 5px 10px rgba(22, 24, 26, 0.8),
+
+        inset -5px -5px 10px rgba(60, 66, 74, 0.8);
+
+    transform:
+
+        translateY(2px)
+
+        scale(0.98);
+}
+
+
+/* HOVER DEL FORMULARIO */
+
+.neumorphism-dark:hover {
+
+    box-shadow:
+
+        inset 5px 5px 12px rgba(22, 24, 26, 0.8),
+
+        inset -5px -5px 12px rgba(60, 66, 74, 0.7),
+
+        10px 10px 20px rgba(22, 24, 26, 0.9),
+
+        -10px -10px 20px rgba(60, 66, 74, 0.7);
+}

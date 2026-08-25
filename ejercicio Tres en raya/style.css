@@ -1,0 +1,619 @@
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* =====================================
+   CUERPO
+===================================== */
+
+body {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    /* COLOR PARECIDO AL FONDO DE LA IMAGEN */
+
+    background: #f4f3ef;
+}
+
+
+/* =====================================
+   TÍTULO
+===================================== */
+
+.titulo {
+
+    font-size: 42px;
+
+    color: #3d3933;
+
+    letter-spacing: 4px;
+
+    text-align: center;
+
+
+    /* TEXT SHADOW */
+
+    text-shadow:
+
+        3px 3px 0px #c5c0b5,
+
+        6px 6px 10px rgba(60, 55, 48, 0.35);
+
+
+    transition:
+
+        transform 0.3s ease,
+
+        text-shadow 0.3s ease;
+}
+
+
+/* =====================================
+   HOVER TÍTULO
+===================================== */
+
+.titulo:hover {
+
+    transform:
+
+        translateY(-4px)
+
+        scale(1.03);
+
+    text-shadow:
+
+        4px 4px 0px #aaa397,
+
+        8px 8px 15px rgba(60, 55, 48, 0.45);
+}
+
+
+/* =====================================
+   CONTENEDOR DEL JUEGO
+===================================== */
+
+.juego {
+
+    width: 500px;
+
+    max-width: 95vw;
+
+    padding: 30px;
+
+    border-radius: 35px;
+
+
+    /* COLOR DEL MARCO */
+
+    background: #e5e2d9;
+
+
+    /*
+        BOX SHADOW
+    */
+
+    box-shadow:
+
+        15px 15px 30px #b8b4aa,
+
+        -15px -15px 30px #ffffff;
+
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 25px;
+
+
+    transition:
+
+        transform 0.3s ease,
+
+        box-shadow 0.3s ease;
+}
+
+
+/* =====================================
+   HOVER DEL CONTENEDOR
+===================================== */
+
+.juego:hover {
+
+    transform:
+
+        translateY(-8px)
+
+        scale(1.02);
+
+    box-shadow:
+
+        18px 18px 35px #aaa69c,
+
+        -18px -18px 35px #ffffff;
+}
+
+
+/* =====================================
+   TABLERO
+===================================== */
+
+.tablero {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    padding: 20px;
+
+    border-radius: 25px;
+
+
+    /*
+        COLOR BEIGE / MADERA
+        PARECIDO A LA FOTO
+    */
+
+    background: #d8d0bd;
+
+
+    /*
+        SOMBRA INTERNA
+        INSET
+    */
+
+    box-shadow:
+
+        inset 8px 8px 16px #aaa18e,
+
+        inset -8px -8px 16px #eee9db;
+
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    grid-template-rows:
+        repeat(3, 1fr);
+
+    gap: 8px;
+}
+
+
+/* =====================================
+   CASILLAS
+===================================== */
+
+.casilla {
+
+    /*
+        COLOR DE LA MADERA
+    */
+
+    background: #d9d0ba;
+
+
+    /*
+        BORDES OSCUROS COMO EN LA FOTO
+    */
+
+    border: 3px solid #4a4338;
+
+    border-radius: 3px;
+
+
+    /*
+        BOX SHADOW
+    */
+
+    box-shadow:
+
+        5px 5px 8px rgba(63, 56, 45, 0.35),
+
+        -3px -3px 7px rgba(255, 255, 255, 0.55);
+
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+
+    cursor: pointer;
+
+
+    /* AGREGADO: evita que la letra deforme la casilla */
+    overflow: hidden;
+
+
+    transition:
+
+        transform 0.2s ease,
+
+        box-shadow 0.2s ease,
+
+        background 0.2s ease;
+}
+
+
+/* =====================================
+   HOVER CASILLA
+===================================== */
+
+.casilla:hover {
+
+    transform:
+
+        translateY(-4px)
+
+        scale(1.03);
+
+
+    /*
+        INSET + OUTER SHADOW
+    */
+
+    box-shadow:
+
+        inset 5px 5px 10px rgba(100, 90, 75, 0.4),
+
+        inset -5px -5px 10px rgba(255, 255, 255, 0.55),
+
+        7px 7px 14px rgba(63, 56, 45, 0.4);
+}
+
+
+/* =====================================
+   CLICK CASILLA
+===================================== */
+
+.casilla:active {
+
+    transform:
+
+        translateY(2px)
+
+        scale(0.97);
+
+
+    box-shadow:
+
+        inset 7px 7px 12px rgba(70, 62, 50, 0.45),
+
+        inset -7px -7px 12px rgba(255, 255, 255, 0.5);
+}
+
+
+/* =====================================
+   X
+===================================== */
+
+.x {
+
+    /* CAMBIADO: aumentado de 100px a 175px para tocar las esquinas */
+    font-size: 175px;
+
+    font-weight: bold;
+
+    /* CAMBIADO: de 1 a 0.65 para quitar los márgenes invisibles de la letra */
+    line-height: 0.65;
+
+
+    /*
+        AZUL DE LA IMAGEN
+    */
+
+    color: #168df5;
+
+
+    /*
+        TEXT SHADOW AZUL OSCURO
+    */
+
+    text-shadow:
+
+        3px 3px 0px #006fd3,
+
+        6px 6px 10px rgba(0, 80, 160, 0.4);
+
+
+    /*
+        DROP SHADOW
+    */
+
+    filter:
+
+        drop-shadow(
+            5px 5px 5px rgba(50, 65, 80, 0.4)
+        );
+
+
+    transition:
+
+        transform 0.25s ease,
+
+        filter 0.25s ease;
+}
+
+
+/* =====================================
+   HOVER X
+===================================== */
+
+.casilla:hover .x {
+
+    transform:
+
+        /* CAMBIADO: scale bajado de 1.12 a 1.05 */
+        scale(1.05)
+
+        rotate(3deg);
+
+
+    filter:
+
+        drop-shadow(
+            7px 7px 8px rgba(0, 80, 170, 0.5)
+        );
+}
+
+
+/* =====================================
+   O
+===================================== */
+
+.o {
+
+    /* CAMBIADO: aumentado de 90px a 165px */
+    font-size: 165px;
+
+    font-weight: bold;
+
+    /* CAMBIADO: de 1 a 0.65 para quitar los márgenes invisibles de la letra */
+    line-height: 0.65;
+
+
+    /*
+        BLANCO DE LA IMAGEN
+    */
+
+    color: #f3f4f4;
+
+
+    /*
+        BORDE / SOMBRA GRIS
+    */
+
+    text-shadow:
+
+        3px 3px 0px #b5b6b3,
+
+        6px 6px 10px rgba(50, 50, 45, 0.45);
+
+
+    /*
+        DROP SHADOW
+    */
+
+    filter:
+
+        drop-shadow(
+            5px 5px 6px rgba(50, 50, 45, 0.4)
+        );
+
+
+    transition:
+
+        transform 0.25s ease,
+
+        filter 0.25s ease;
+}
+
+
+/* =====================================
+   HOVER O
+===================================== */
+
+.casilla:hover .o {
+
+    transform:
+
+        /* CAMBIADO: scale bajado de 1.12 a 1.05 */
+        scale(1.05)
+
+        rotate(-3deg);
+
+
+    filter:
+
+        drop-shadow(
+            7px 7px 8px rgba(45, 45, 40, 0.5)
+        );
+}
+
+
+/* =====================================
+   RESULTADO
+===================================== */
+
+.resultado {
+
+    color: #3d3933;
+
+    font-size: 28px;
+
+    text-align: center;
+
+
+    /*
+        TEXT SHADOW
+    */
+
+    text-shadow:
+
+        2px 2px 0px #bcb7aa,
+
+        4px 4px 8px rgba(60, 55, 45, 0.3);
+}
+
+
+/* =====================================
+   BOTÓN
+===================================== */
+
+.boton {
+
+    padding: 14px 30px;
+
+    border: none;
+
+    border-radius: 12px;
+
+
+    background: #d8d0bd;
+
+    color: #3d3933;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+
+    cursor: pointer;
+
+
+    /*
+        BOX SHADOW
+    */
+
+    box-shadow:
+
+        7px 7px 14px #aaa18e,
+
+        -7px -7px 14px #f5f1e7;
+
+
+    /*
+        TEXT SHADOW
+    */
+
+    text-shadow:
+
+        2px 2px 0px #b5ae9e;
+
+
+    transition:
+
+        transform 0.2s ease,
+
+        box-shadow 0.2s ease;
+}
+
+
+/* =====================================
+   HOVER BOTÓN
+===================================== */
+
+.boton:hover {
+
+    transform:
+
+        translateY(-3px)
+
+        scale(1.05);
+
+
+    /*
+        INSET
+    */
+
+    box-shadow:
+
+        inset 5px 5px 10px #aaa18e,
+
+        inset -5px -5px 10px #f5f1e7;
+}
+
+
+/* =====================================
+   ACTIVE BOTÓN
+===================================== */
+
+.boton:active {
+
+    transform:
+
+        translateY(2px)
+
+        scale(0.97);
+
+
+    box-shadow:
+
+        inset 7px 7px 12px #aaa18e,
+
+        inset -7px -7px 12px #f5f1e7;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 550px) {
+
+    .juego {
+
+        padding: 20px;
+
+    }
+
+
+    .titulo {
+
+        font-size: 30px;
+
+    }
+
+
+    /* CAMBIADO: tamaños actualizados para móvil */
+
+    .x {
+
+        font-size: 115px;
+
+    }
+
+
+    .o {
+
+        font-size: 110px;
+
+    }
+
+}

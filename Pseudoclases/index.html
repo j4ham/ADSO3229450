@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulario Multidioma</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form class="formulario" id="formulario" lang="es" dir="ltr">
+
+        <!-- =================================
+             TÍTULO
+             ================================= -->
+
+        <h2 id="titulo">
+            Formulario de Preferencias
+        </h2>
+
+
+        <!-- =================================
+             SELECTOR DE IDIOMA
+             ================================= -->
+
+        <div class="campo idioma">
+
+
+
+            <label for="idioma" id="labelIdioma">
+                Selecciona el idioma
+            </label>
+
+            <select id="idioma">
+
+                <option value="es">🇪🇸 Español</option>
+
+                <option value="en">🇺🇸 English</option>
+
+                <option value="ja">🇯🇵 日本語</option>
+
+                <option value="ru">🇷🇺 Русский</option>
+
+                <option value="ar">🇸🇦 العربية</option>
+
+            </select>
+
+        </div>
+
+
+        <!-- =================================
+             RADIO BUTTONS
+             ================================= -->
+
+        <div class="grupo">
+
+            <h3 id="tituloGenero">
+                Selecciona tu género
+            </h3>
+
+            <label class="opcion">
+
+                <input
+                    type="radio"
+                    name="genero"
+                    value="masculino">
+
+                <span id="masculino">
+                    Masculino
+                </span>
+
+            </label>
+
+
+            <label class="opcion">
+
+                <input
+                    type="radio"
+                    name="genero"
+                    value="femenino">
+
+                <span id="femenino">
+                    Femenino
+                </span>
+
+            </label>
+
+
+            <label class="opcion">
+
+                <input
+                    type="radio"
+                    name="genero"
+                    value="otro">
+
+                <span id="otro">
+                    Otro
+                </span>
+
+            </label>
+
+        </div>
+
+
+        <!-- =================================
+             CHECKBOX
+             ================================= -->
+
+        <div class="grupo">
+
+            <h3 id="tituloIntereses">
+                Selecciona tus intereses
+            </h3>
+
+
+            <label class="opcion">
+
+                <input
+                    type="checkbox"
+                    name="intereses">
+
+                <span id="programacion">
+                    Programación
+                </span>
+
+            </label>
+
+
+            <label class="opcion">
+
+                <input
+                    type="checkbox"
+                    name="intereses">
+
+                <span id="videojuegos">
+                    Videojuegos
+                </span>
+
+            </label>
+
+
+            <label class="opcion">
+
+                <input
+                    type="checkbox"
+                    name="intereses">
+
+                <span id="futbol">
+                    Fútbol
+                </span>
+
+            </label>
+
+        </div>
+
+
+        <!-- =================================
+             CONTRASEÑA
+             ================================= -->
+
+        <div class="campo contraseña">
+
+            <label for="password" id="labelPassword">
+                Contraseña
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Escribe tu contraseña"
+                dir="ltr">
+
+        </div>
+
+
+        <!-- =================================
+             TÉRMINOS
+             ================================= -->
+
+        <label class="terminos">
+
+            <input
+                type="checkbox"
+                required>
+
+            <span id="terminos">
+                Acepto los términos y condiciones
+            </span>
+
+        </label>
+
+
+        <!-- =================================
+             BOTÓN
+             ================================= -->
+
+        <button type="submit" id="boton">
+            Enviar
+        </button>
+
+    </form>
+
+
+    <script>
+
+        /* =========================================
+           REFERENCIAS
+           ========================================= */
+
+        const idioma =
+            document.getElementById("idioma");
+
+        const formulario =
+            document.getElementById("formulario");
+
+        const titulo =
+            document.getElementById("titulo");
+
+        const labelIdioma =
+            document.getElementById("labelIdioma");
+
+        const tituloGenero =
+            document.getElementById("tituloGenero");
+
+        const masculino =
+            document.getElementById("masculino");
+
+        const femenino =
+            document.getElementById("femenino");
+
+        const otro =
+            document.getElementById("otro");
+
+        const tituloIntereses =
+            document.getElementById("tituloIntereses");
+
+        const programacion =
+            document.getElementById("programacion");
+
+        const videojuegos =
+            document.getElementById("videojuegos");
+
+        const futbol =
+            document.getElementById("futbol");
+
+        const labelPassword =
+            document.getElementById("labelPassword");
+
+        const password =
+            document.getElementById("password");
+
+        const terminos =
+            document.getElementById("terminos");
+
+        const boton =
+            document.getElementById("boton");
+
+
+        /* =========================================
+           CAMBIO DE IDIOMA
+           ========================================= */
+
+        idioma.addEventListener("change", function () {
+
+            const lang = this.value;
+
+            /* CAMBIAR LANG */
+
+            formulario.setAttribute("lang", lang);
+
+
+            /* =================================
+               DIRECCIÓN
+               ================================= */
+
+            if (lang === "ar") {
+
+                formulario.setAttribute("dir", "rtl");
+
+            } else {
+
+                formulario.setAttribute("dir", "ltr");
+
+            }
+
+
+            /* =================================
+               ESPAÑOL
+               ================================= */
+
+            if (lang === "es") {
+
+                titulo.textContent =
+                    "Formulario de Preferencias";
+
+                labelIdioma.textContent =
+                    "Selecciona el idioma";
+
+                tituloGenero.textContent =
+                    "Selecciona tu género";
+
+                masculino.textContent =
+                    "Masculino";
+
+                femenino.textContent =
+                    "Femenino";
+
+                otro.textContent =
+                    "Otro";
+
+                tituloIntereses.textContent =
+                    "Selecciona tus intereses";
+
+                programacion.textContent =
+                    "Programación";
+
+                videojuegos.textContent =
+                    "Videojuegos";
+
+                futbol.textContent =
+                    "Fútbol";
+
+                labelPassword.textContent =
+                    "Contraseña";
+
+                password.placeholder =
+                    "Escribe tu contraseña";
+
+                terminos.textContent =
+                    "Acepto los términos y condiciones";
+
+                boton.textContent =
+                    "Enviar";
+            }
+
+
+            /* =================================
+               INGLÉS
+               ================================= */
+
+            if (lang === "en") {
+
+                titulo.textContent =
+                    "Preferences Form";
+
+                labelIdioma.textContent =
+                    "Select language";
+
+                tituloGenero.textContent =
+                    "Select your gender";
+
+                masculino.textContent =
+                    "Male";
+
+                femenino.textContent =
+                    "Female";
+
+                otro.textContent =
+                    "Other";
+
+                tituloIntereses.textContent =
+                    "Select your interests";
+
+                programacion.textContent =
+                    "Programming";
+
+                videojuegos.textContent =
+                    "Video Games";
+
+                futbol.textContent =
+                    "Football";
+
+                labelPassword.textContent =
+                    "Password";
+
+                password.placeholder =
+                    "Enter your password";
+
+                terminos.textContent =
+                    "I accept the terms and conditions";
+
+                boton.textContent =
+                    "Submit";
+            }
+
+
+            /* =================================
+               JAPONÉS
+               ================================= */
+
+            if (lang === "ja") {
+
+                titulo.textContent =
+                    "設定フォーム";
+
+                labelIdioma.textContent =
+                    "言語を選択";
+
+                tituloGenero.textContent =
+                    "性別を選択";
+
+                masculino.textContent =
+                    "男性";
+
+                femenino.textContent =
+                    "女性";
+
+                otro.textContent =
+                    "その他";
+
+                tituloIntereses.textContent =
+                    "興味を選択";
+
+                programacion.textContent =
+                    "プログラミング";
+
+                videojuegos.textContent =
+                    "ゲーム";
+
+                futbol.textContent =
+                    "サッカー";
+
+                labelPassword.textContent =
+                    "パスワード";
+
+                password.placeholder =
+                    "パスワードを入力してください";
+
+                terminos.textContent =
+                    "利用規約に同意します";
+
+                boton.textContent =
+                    "送信";
+            }
+
+
+            /* =================================
+               RUSO
+               ================================= */
+
+            if (lang === "ru") {
+
+                titulo.textContent =
+                    "Форма предпочтений";
+
+                labelIdioma.textContent =
+                    "Выберите язык";
+
+                tituloGenero.textContent =
+                    "Выберите пол";
+
+                masculino.textContent =
+                    "Мужчина";
+
+                femenino.textContent =
+                    "Женщина";
+
+                otro.textContent =
+                    "Другое";
+
+                tituloIntereses.textContent =
+                    "Выберите интересы";
+
+                programacion.textContent =
+                    "Программирование";
+
+                videojuegos.textContent =
+                    "Видеоигры";
+
+                futbol.textContent =
+                    "Футбол";
+
+                labelPassword.textContent =
+                    "Пароль";
+
+                password.placeholder =
+                    "Введите пароль";
+
+                terminos.textContent =
+                    "Я принимаю условия";
+
+                boton.textContent =
+                    "Отправить";
+            }
+
+
+            /* =================================
+               ÁRABE
+               ================================= */
+
+            if (lang === "ar") {
+
+                titulo.textContent =
+                    "نموذج التفضيلات";
+
+                labelIdioma.textContent =
+                    "اختر اللغة";
+
+                tituloGenero.textContent =
+                    "اختر الجنس";
+
+                masculino.textContent =
+                    "ذكر";
+
+                femenino.textContent =
+                    "أنثى";
+
+                otro.textContent =
+                    "آخر";
+
+                tituloIntereses.textContent =
+                    "اختر اهتماماتك";
+
+                programacion.textContent =
+                    "البرمجة";
+
+                videojuegos.textContent =
+                    "ألعاب الفيديو";
+
+                futbol.textContent =
+                    "كرة القدم";
+
+                labelPassword.textContent =
+                    "كلمة المرور";
+
+                password.placeholder =
+                    "أدخل كلمة المرور";
+
+                terminos.textContent =
+                    "أوافق على الشروط والأحكام";
+
+                boton.textContent =
+                    "إرسال";
+            }
+
+        });
+
+
+        /* =========================================
+           CONTRASEÑA
+           
+           CADA CLICK CAMBIA:
+           
+           LTR → RTL
+           RTL → LTR
+           ========================================= */
+
+        password.addEventListener("click", function () {
+
+            const direccion =
+                this.getAttribute("dir");
+
+
+            if (direccion === "ltr") {
+
+                this.setAttribute("dir", "rtl");
+
+                this.classList.add("password-activa");
+
+            } else {
+
+                this.setAttribute("dir", "ltr");
+
+                this.classList.remove("password-activa");
+
+            }
+
+        });
+
+
+        /* =========================================
+           CLICK FUERA DEL FORMULARIO
+           
+           RESTAURA LA CONTRASEÑA
+           ========================================= */
+
+        document.addEventListener("click", function (evento) {
+
+            if (!formulario.contains(evento.target)) {
+
+                password.setAttribute("dir", "ltr");
+
+                password.classList.remove("password-activa");
+
+                formulario.classList.remove("formulario-enviado");
+
+            }
+
+        });
+
+
+        /* =========================================
+           BOTÓN ENVIAR
+           
+           CAMBIA EL COLOR DE LOS BORDES
+           ========================================= */
+
+        formulario.addEventListener("submit", function (evento) {
+
+            /* Evita que la página se recargue */
+
+            evento.preventDefault();
+
+
+            /* Cambia el borde */
+
+            formulario.classList.add("formulario-enviado");
+
+        });
+
+    </script>
+
+</body>
+
+</html>
